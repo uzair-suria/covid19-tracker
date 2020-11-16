@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import CovidDataStore from './context/CovidDataStore';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<CovidDataStore>
+			<App />
+		</CovidDataStore>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
