@@ -19,7 +19,6 @@ const CovidDataStore = ({ children }) => {
 
 	useEffect(() => {
 		getData(covidSourceURL.confirmed, 'confirmed', (confirmedData) => {
-			// console.log(confirmedData);
 			console.log(`>>>>>>>>>>>>>>>>Extracting dates<<<<<<<<<<<<<<`);
 			setDates(confirmedData.header.dataDates);
 
