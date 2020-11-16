@@ -59,7 +59,7 @@ export const getData = (url, caseType, callback) => {
 		console.log('... now evaluating global values');
 		countryList.forEach((country) => {
 			if (!filteredData.global) {
-				console.log(`First Entry without global`);
+				console.log(`Adding global property`);
 				filteredData.global = filteredData[country];
 			} else {
 				const cumValues = filteredData.global;
