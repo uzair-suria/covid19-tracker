@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { red, indigo, green, orange, grey } from '@material-ui/core/colors';
+import { red, indigo, green, /*orange,*/ grey } from '@material-ui/core/colors';
 import { covidContext } from '../context/CovidDataStore';
 import CountUp from 'react-countup';
 
@@ -44,11 +44,11 @@ const recoveredCard = makeStyles({
 	},
 });
 
-const activeCard = makeStyles({
-	root: {
-		borderBottom: `10px solid ${orange[200]}`,
-	},
-});
+// const activeCard = makeStyles({
+// 	root: {
+// 		borderBottom: `10px solid ${orange[200]}`,
+// 	},
+// });
 
 const useStyles = makeStyles({
 	title: {
@@ -69,7 +69,7 @@ const Cards = () => {
 	const deathClass = deathCard();
 	const infectedClass = infectedCard();
 	const recoveredClass = recoveredCard();
-	const activeClass = activeCard();
+	// const activeClass = activeCard();
 	const classes = useStyles();
 
 	const { country, confirmed, recovered, deaths, dates } = React.useContext(
