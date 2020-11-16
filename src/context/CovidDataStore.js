@@ -10,7 +10,7 @@ const CovidDataStore = ({ children }) => {
 		deaths: `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv`,
 	};
 
-	const [country, setCountry] = useState('Pakistan');
+	const [country, setCountry] = useState('');
 	const [confirmed, setConfirmed] = useState({});
 	const [recovered, setRecovered] = useState({});
 	const [deaths, setDeaths] = useState({});
@@ -24,7 +24,6 @@ const CovidDataStore = ({ children }) => {
 
 			console.log(`>>>>>>>>>>>>>>>>Extracting countries<<<<<<<<<<<<<<`);
 			setCountriesList(confirmedData.header.countryList);
-			console.log(`eaw list`, confirmedData.header.countryList);
 
 			console.log(`>>>>>>>>>>>>>>>>Extracting confirmed cases<<<<<<<<<<<<<<`);
 			let countriesConfirmed = confirmedData;
@@ -39,7 +38,7 @@ const CovidDataStore = ({ children }) => {
 			setRecovered(countriesRecovered);
 		});
 
-		getData(covidSourceURL.deaths, 'deaths', (deathsData) => {
+		getData(covidSourceURL.deaths, 'recovered', (deathsData) => {
 			console.log(`>>>>>>>>>>>>>>>>Extracting fatal cases<<<<<<<<<<<<<<`);
 			let countriesDeaths = deathsData;
 			delete countriesDeaths.header;
