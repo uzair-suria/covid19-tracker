@@ -1,7 +1,7 @@
 import { readRemoteFile } from 'react-papaparse';
 
 /**
- * getData function takes two arguments required to fetch the COVID-19 CSV data and one more aurgument to consume the data from the calling component. The data is taken from 'COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University'
+ * getData function takes two arguments required to fetch the COVID-19 CSV data and one more argument to consume the data from the calling component. The data is taken from 'COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University'
  * @param {string} url - url to the time series CSV
  * @param {string} caseType - Type of data expected (confirmed, recovered, deaths)
  * @param {function} callback - use this callback to consume data on component side
