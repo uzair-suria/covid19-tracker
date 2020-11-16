@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from '../api/covidData';
 
-const covidContext = React.createContext();
+export const covidContext = React.createContext();
 
-const CovidDataStore = (props) => {
+const CovidDataStore = ({ children }) => {
 	const covidSourceURL = {
 		confirmed: `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv`,
 		recovered: `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv`,
@@ -67,7 +67,7 @@ const CovidDataStore = (props) => {
 				setDates,
 			}}
 		>
-			{props.children}
+			{children}
 		</covidContext.Provider>
 	);
 };
