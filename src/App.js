@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './App.css';
 import { covidContext } from './context/CovidDataStore';
 import Cards from './components/Cards';
+import CountrySelector from './components/CountrySelector';
 
 function App() {
 	const {
@@ -22,6 +23,7 @@ function App() {
 	console.log(`Using Context`, recovered['Antigua and Barbuda']);
 	return (
 		<div className="container">
+			<CountrySelector />
 			<Cards />
 		</div>
 	);
