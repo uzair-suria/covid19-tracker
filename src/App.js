@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useContext } from 'react';
 import './App.css';
+import { covidContext } from './context/CovidDataStore';
+import Cards from './components/Cards';
+import CountrySelector from './components/CountrySelector';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const {
+		// country,
+		// setCountry,
+		// confirmed,
+		// setConfirmed,
+		recovered,
+		// setRecovered,
+		// deaths,
+		// setDeaths,
+		// countriesList,
+		// setCountriesList,
+		// dates,
+		// setDates,
+	} = useContext(covidContext);
+
+	console.log(`Using Context`, recovered['Antigua and Barbuda']);
+	return (
+		<div className="container">
+			<CountrySelector />
+			<Cards />
+		</div>
+	);
 }
 
 export default App;
