@@ -70,7 +70,7 @@ const Cards = () => {
 			<div className={baseClass.container}>
 				<Card className={classNames(baseClass.root, infectedClass.root)}>
 					<CardContent>
-						<Typography variant="p">Infected</Typography>
+						<Typography variant="body1">Infected</Typography>
 						<Typography variant="h6">53M</Typography>
 					</CardContent>
 				</Card>
