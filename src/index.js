@@ -6,11 +6,12 @@ import CovidDataStore from './context/CovidDataStore';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-	<React.StrictMode>
-		<CovidDataStore>
-			<App />
-		</CovidDataStore>
-	</React.StrictMode>,
+	<CovidDataStore>
+		<App />
+		<h3 style={{ color: 'gray', textAlign: 'center' }}>
+			The Graphs for this app are under development. Please visit later
+		</h3>
+	</CovidDataStore>,
 	document.getElementById('root')
 );
 
