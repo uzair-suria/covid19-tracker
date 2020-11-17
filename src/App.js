@@ -1,26 +1,26 @@
 import React, { useContext } from 'react';
 import './App.css';
-import { covidContext } from './context/CovidDataStore';
+// import { covidContext } from './context/CovidDataStore';
 import Cards from './components/Cards';
 import CountrySelector from './components/CountrySelector';
 
 function App() {
-	const {
-		// country,
-		// setCountry,
-		// confirmed,
-		// setConfirmed,
-		recovered,
-		// setRecovered,
-		// deaths,
-		// setDeaths,
-		// countriesList,
-		// setCountriesList,
-		// dates,
-		// setDates,
-	} = useContext(covidContext);
+	// const {
+	// 	country,
+	// 	setCountry,
+	// 	confirmed,
+	// 	setConfirmed,
+	// 	recovered,
+	// 	setRecovered,
+	// 	deaths,
+	// 	setDeaths,
+	// 	countriesList,
+	// 	setCountriesList,
+	// 	dates,
+	// 	setDates,
+	// } = useContext(covidContext);
 
-	console.log(`Using Context`, recovered['Antigua and Barbuda']);
+	// console.log(`Using Context`, recovered['Antigua and Barbuda']);
 	return (
 		<div className="container">
 			<CountrySelector />
